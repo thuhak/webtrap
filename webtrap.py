@@ -49,7 +49,7 @@ class MainHandler(tornado.web.RequestHandler):
                   'arguments': self.request.arguments,
                   'body': body
                   })
-        self.ret = json.dumps(data, indent=True)
+        self.ret = json.dumps(data, indent=True, ensure_ascii=False)
         print(self.ret)
 
     def get(self):
