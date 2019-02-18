@@ -67,6 +67,9 @@ class MainHandler(tornado.web.RequestHandler):
     def put(self):
         self.write(self.ret)
 
+    def delete(self):
+        self.write(self.ret)
+
 
 def make_app():
     return tornado.web.Application([(r"/.*", MainHandler),])
