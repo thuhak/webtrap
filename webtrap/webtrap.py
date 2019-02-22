@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-
-#author: thuhak.zhou@nio.com
 import sys
 import json
 import tornado.web
@@ -75,7 +73,11 @@ def make_app():
     return tornado.web.Application([(r"/.*", MainHandler),])
 
 
-if __name__ == "__main__":
+def main():
     app = make_app()
     app.listen(options.port)
     tornado.ioloop.IOLoop.current().start()
+
+
+if __name__ == "__main__":
+    main()
