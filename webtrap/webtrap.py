@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import sys
+import logging
 import json
 import tornado.web
 import tornado.ioloop
@@ -76,6 +77,7 @@ def make_app():
 def main():
     app = make_app()
     app.listen(options.port)
+    logging.info('start webserver on port {}'.format(options.port))
     tornado.ioloop.IOLoop.current().start()
 
 
